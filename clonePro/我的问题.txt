@@ -1,0 +1,26 @@
+常用命令：net start mongoDB
+1220967745@qq.com
+hn2013-515
+lorita
+
+
+
+怎么自定义git仓库的目录，只能再chan里面？
+$ grunt执行失败
+
+
+
+
+
+
+
+
+
+md c:\portableapps\mongodb\data\db
+md c:\portableapps\mongodb\data\log
+
+echo logpath=c:\PortableApps\mongodb\data\log\mongod.log> "c:\portableapps\mongodb\mongod.cfg"
+echo dbpath=c:\PortableApps\mongodb\data\db>> "c:\portableapps\mongodb\mongod.cfg"
+echo fork=true>> "c:\portableapps\mongodb\mongod.cfg"
+
+sc create MongoDB binPath= "\"C:\Program Files\wtt\mongo\bin\mongod.exe\" --service --config=\"D:\PortableApps\mongodb\mongod.cfg\"" DisplayName= "MongoDB" start= "demand"
